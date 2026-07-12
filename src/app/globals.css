@@ -41,8 +41,7 @@
   --color-card: var(--card);
   --color-brass: var(--brass);
   --color-brass-foreground: var(--brass-foreground);
-  --color-emerald: var(--emerald);
-  --color-emerald-foreground: var(--emerald-foreground);
+  --color-blush: var(--blush);
   --color-ink: var(--ink);
   --radius-sm: calc(var(--radius) * 0.5);
   --radius-md: calc(var(--radius) * 0.75);
@@ -55,91 +54,55 @@
 }
 
 :root {
-  --background: #FAF7F1;
-  --foreground: #1E1C19;
-  --ink: #1E1C19;
+  /* Warm cream base — matching Alexandra's portfolio aesthetic */
+  --background: #FAF5EE;
+  --foreground: #3B2820;
+  --ink: #3B2820;
   --card: #FFFFFF;
-  --card-foreground: #1E1C19;
+  --card-foreground: #3B2820;
   --popover: #FFFFFF;
-  --popover-foreground: #1E1C19;
+  --popover-foreground: #3B2820;
 
-  --primary: #17423B;
-  --primary-foreground: #FAF7F1;
+  /* Deep warm brown primary — from the portfolio typography */
+  --primary: #3B2820;
+  --primary-foreground: #FAF5EE;
 
-  --secondary: #F0EBE0;
-  --secondary-foreground: #1E1C19;
+  --secondary: #F3EBE0;
+  --secondary-foreground: #3B2820;
 
-  --muted: #F2EEE5;
-  --muted-foreground: #6B6459;
+  --muted: #F0E8DC;
+  --muted-foreground: #7A6B5D;
 
-  --accent: #EFE7D8;
-  --accent-foreground: #17423B;
+  --accent: #EDE4D6;
+  --accent-foreground: #3B2820;
 
+  /* Brass/gold — from the portfolio's golden flowing lines */
   --brass: #B08D57;
-  --brass-foreground: #FAF7F1;
-  --emerald: #17423B;
-  --emerald-foreground: #FAF7F1;
+  --brass-foreground: #FAF5EE;
+  /* Blush — from the portfolio's warm pink tones */
+  --blush: #D4A89A;
 
   --destructive: #B3452F;
-  --border: #E4DDCE;
-  --input: #E4DDCE;
+  --border: #E6DACE;
+  --input: #E6DACE;
   --ring: #B08D57;
 
-  --chart-1: #17423B;
+  --chart-1: #3B2820;
   --chart-2: #B08D57;
-  --chart-3: #6B6459;
-  --chart-4: #8FAFA4;
+  --chart-3: #7A6B5D;
+  --chart-4: #D4A89A;
   --chart-5: #D9C9A8;
 
   --radius: 1.1rem;
 
   --sidebar: #FFFFFF;
-  --sidebar-foreground: #1E1C19;
-  --sidebar-primary: #17423B;
-  --sidebar-primary-foreground: #FAF7F1;
-  --sidebar-accent: #EFE7D8;
-  --sidebar-accent-foreground: #17423B;
-  --sidebar-border: #E4DDCE;
+  --sidebar-foreground: #3B2820;
+  --sidebar-primary: #3B2820;
+  --sidebar-primary-foreground: #FAF5EE;
+  --sidebar-accent: #EDE4D6;
+  --sidebar-accent-foreground: #3B2820;
+  --sidebar-border: #E6DACE;
   --sidebar-ring: #B08D57;
-}
-
-.dark {
-  --background: #14201C;
-  --foreground: #F2EEE5;
-  --ink: #F2EEE5;
-  --card: #1A2925;
-  --card-foreground: #F2EEE5;
-  --popover: #1A2925;
-  --popover-foreground: #F2EEE5;
-  --primary: #DCC79A;
-  --primary-foreground: #14201C;
-  --secondary: #22332D;
-  --secondary-foreground: #F2EEE5;
-  --muted: #22332D;
-  --muted-foreground: #A9A296;
-  --accent: #2A3B34;
-  --accent-foreground: #DCC79A;
-  --brass: #C9A56C;
-  --brass-foreground: #14201C;
-  --emerald: #8FAFA4;
-  --emerald-foreground: #14201C;
-  --destructive: #D97757;
-  --border: rgba(242, 238, 229, 0.12);
-  --input: rgba(242, 238, 229, 0.14);
-  --ring: #C9A56C;
-  --chart-1: #DCC79A;
-  --chart-2: #8FAFA4;
-  --chart-3: #A9A296;
-  --chart-4: #4E6459;
-  --chart-5: #6B6459;
-  --sidebar: #1A2925;
-  --sidebar-foreground: #F2EEE5;
-  --sidebar-primary: #DCC79A;
-  --sidebar-primary-foreground: #14201C;
-  --sidebar-accent: #2A3B34;
-  --sidebar-accent-foreground: #DCC79A;
-  --sidebar-border: rgba(242, 238, 229, 0.12);
-  --sidebar-ring: #C9A56C;
 }
 
 @layer base {

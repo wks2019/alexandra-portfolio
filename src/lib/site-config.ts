@@ -1,8 +1,8 @@
 export const SITE = {
   name: "Alexandra Vlasceanu",
-  tagline: "Digital Marketing Professional",
+  tagline: "Human Centric Strategist",
   description:
-    "Ten years leading customer experience in luxury hospitality — now channeling that same precision, empathy, and analytical thinking into digital marketing.",
+    "I believe the best digital marketing is rooted in a deep understanding of the customer. A decade in hospitality taught me to read people — now I read data with the same instinct.",
   url: "https://alexandravlasceanu.com",
   email: "ralexandra24.ra@gmail.com",
   phone: "07595331658",

@@ -7,9 +7,9 @@ import { buttonVariants } from "@/components/ui/button";
 import { hero } from "@/lib/content/site-content";
 
 const floatingCards = [
-  { label: "Guest satisfaction", value: "98%", position: "top-6 -left-6 md:-left-14" },
-  { label: "Organic growth", value: "+142%", position: "bottom-10 -right-4 md:-right-16" },
-  { label: "Years in service", value: "10+", position: "top-1/2 -right-10 md:-right-20" },
+  { label: "Customer insight", value: "10+yrs", position: "top-6 -left-6 md:-left-14" },
+  { label: "Google Certified", value: "2024", position: "bottom-10 -right-4 md:-right-16" },
+  { label: "Career pivot", value: "Ready", position: "top-1/2 -right-10 md:-right-20" },
 ];
 
 export function Hero() {
@@ -20,7 +20,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(60% 50% at 80% 10%, rgba(176,141,87,0.16), transparent), radial-gradient(50% 40% at 10% 30%, rgba(23,66,59,0.10), transparent)",
+            "radial-gradient(60% 50% at 80% 10%, rgba(212,168,154,0.18), transparent), radial-gradient(50% 40% at 10% 30%, rgba(176,141,87,0.12), transparent)",
         }}
       />
 
@@ -85,22 +85,22 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="keycard relative h-full w-full overflow-hidden bg-gradient-to-br from-primary via-primary to-[#0F2E28] shadow-xl"
+            className="keycard relative h-full w-full overflow-hidden bg-gradient-to-br from-[#3B2820] via-[#5A3D30] to-[#3B2820] shadow-xl"
           >
             <div
               aria-hidden
               className="absolute inset-0 opacity-40"
               style={{
                 background:
-                  "radial-gradient(45% 35% at 25% 20%, rgba(176,141,87,0.5), transparent)",
+                  "radial-gradient(45% 35% at 25% 20%, rgba(212,168,154,0.5), transparent), radial-gradient(35% 30% at 75% 70%, rgba(176,141,87,0.4), transparent)",
               }}
             />
             <div className="absolute inset-x-6 bottom-6 rounded-2xl bg-white/10 p-4 backdrop-blur-sm">
               <p className="font-mono text-[11px] uppercase tracking-widest text-primary-foreground/70">
-                Now Boarding
+                My Purpose
               </p>
-              <p className="mt-1 font-heading text-lg text-primary-foreground">
-                Digital Marketing
+              <p className="mt-1 font-heading text-base text-primary-foreground leading-snug">
+                Authentic connections between brands & communities
               </p>
             </div>
           </motion.div>

@@ -14,15 +14,14 @@ export function CtaBanner() {
               className="pointer-events-none absolute inset-0"
               style={{
                 background:
-                  "radial-gradient(50% 60% at 85% 20%, rgba(176,141,87,0.25), transparent)",
+                  "radial-gradient(50% 60% at 85% 20%, rgba(212,168,154,0.2), transparent), radial-gradient(40% 50% at 15% 80%, rgba(176,141,87,0.15), transparent)",
               }}
             />
             <h2 className="relative text-balance font-heading text-3xl font-medium text-primary-foreground md:text-4xl">
               Let&apos;s Build Something Meaningful
             </h2>
             <p className="relative mx-auto mt-4 max-w-md text-primary-foreground/75">
-              Open to marketing coordinator, digital marketing assistant, and
-              junior strategist roles.
+              Open to entry-level digital marketing roles where I can apply customer insight to create high-impact campaigns.
             </p>
             <Link
               href="/#contact"

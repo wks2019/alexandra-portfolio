@@ -11,60 +11,72 @@ import type {
 } from "@/lib/types";
 
 export const hero: HeroContent = {
-  eyebrow: "Hospitality → Digital Marketing",
-  headline: "Turning Customer Experience Into Digital Growth.",
+  eyebrow: "Human Centric Strategist",
+  headline: "Humanising Digital Interactions Through Real-World Insight.",
   subheadline:
-    "Over 10 years creating exceptional customer experiences in luxury hospitality. Now applying that same precision, empathy, and analytical thinking to digital marketing.",
-  primaryCta: { label: "View Portfolio", href: "#work" },
+    "I believe the best digital marketing is rooted in a deep understanding of the customer — a skill I honed across a decade in fast-paced hospitality. Now I create campaigns that don't just reach audiences; they resonate with them.",
+  primaryCta: { label: "View My Work", href: "#work" },
   secondaryCta: { label: "Download CV", href: "/cv.pdf" },
 };
 
 export const storyTimeline: TimelineEntry[] = [
   {
     year: "2014",
-    title: "Front of House, Luxury Hospitality",
+    title: "Hospitality Foundations",
     description:
-      "Started in guest-facing roles, learning that every interaction is a chance to read intent and deliver the right experience at the right moment.",
+      "Started in guest-facing roles, mastering clear communication and rapid adaptability — learning to anticipate needs and deliver exceptional experiences.",
   },
   {
     year: "2018",
     title: "Operations & Team Leadership",
     description:
-      "Moved into managing teams and service standards — translating guest feedback into operational change, on a weekly cadence.",
+      "Moved into CRM, supply chain coordination, and team leadership — translating guest feedback into operational improvements.",
   },
   {
     year: "2023",
-    title: "Curiosity Meets Data",
+    title: "The Digital Pivot",
     description:
-      "Started asking why guests behaved the way they did, not just how to serve them. That question led straight to marketing and analytics.",
+      "Started asking why customers behaved the way they did, not just how to serve them. That question led straight to marketing and analytics.",
   },
   {
     year: "2024",
-    title: "Google Digital Marketing & E-commerce Certificate",
+    title: "Google Certified",
     description:
-      "Formalised the shift — SEO, analytics, email and social — while continuing to apply it inside a live hospitality operation.",
+      "Completed the Google Digital Marketing & E-commerce Professional Certificate — formalising skills in SEO, analytics, email, and social media.",
   },
   {
     year: "Now",
     title: "Career Transition",
     description:
-      "Bringing a decade of customer insight into digital strategy, campaign execution, and measurable growth.",
+      "Seeking an entry-level role where I can apply my background in customer insights to create high-impact, scalable marketing campaigns.",
   },
 ];
 
 export const skills: Skill[] = [
-  { name: "SEO", category: "Marketing" },
-  { name: "Google Analytics", category: "Analytical" },
+  { name: "Digital Marketing", category: "Marketing" },
+  { name: "E-Commerce", category: "Marketing" },
+  { name: "SEO & SEM", category: "Marketing" },
+  { name: "Social Media Marketing", category: "Marketing" },
   { name: "Email Marketing", category: "Marketing" },
   { name: "Content Marketing", category: "Marketing" },
-  { name: "Social Media", category: "Marketing" },
-  { name: "Customer Experience", category: "Interpersonal" },
+  { name: "Google Analytics", category: "Analytical" },
   { name: "Data Analysis", category: "Analytical" },
-  { name: "Digital Strategy", category: "Analytical" },
+  { name: "Managing Online Stores", category: "Analytical" },
   { name: "Communication", category: "Interpersonal" },
+  { name: "Adaptability", category: "Interpersonal" },
+  { name: "Time Management", category: "Interpersonal" },
+  { name: "Curiosity", category: "Interpersonal" },
   { name: "Problem Solving", category: "Interpersonal" },
-  { name: "Project Coordination", category: "Analytical" },
-  { name: "Team Collaboration", category: "Interpersonal" },
+];
+
+export const toolLogos: string[] = [
+  "HubSpot",
+  "Canva",
+  "Figma",
+  "Microsoft 365",
+  "Mailchimp",
+  "Google Analytics",
+  "Shopify",
 ];
 
 export const experience: ExperienceEntry[] = [
@@ -78,6 +90,7 @@ export const experience: ExperienceEntry[] = [
       "Owned the end-to-end guest journey for a premium property, using feedback data to drive service and operational improvements.",
     transferableSkills: [
       "Customer Insight",
+      "CRM",
       "Performance Improvement",
       "Stakeholder Management",
     ],
@@ -90,8 +103,13 @@ export const experience: ExperienceEntry[] = [
     startDate: "2017",
     endDate: "2020",
     summary:
-      "Trained and led a service team, standardising communication scripts and turning recurring complaints into fixed processes.",
-    transferableSkills: ["Training", "Communication", "Problem Solving"],
+      "Trained and led a service team, standardising communication and turning recurring issues into fixed processes. Managed supply chain coordination.",
+    transferableSkills: [
+      "Team Leadership",
+      "Supply Chain Coordination",
+      "Communication",
+      "Problem Solving",
+    ],
     order: 2,
   },
   {
@@ -102,7 +120,7 @@ export const experience: ExperienceEntry[] = [
     endDate: "2017",
     summary:
       "First-line guest contact — built the instinct for reading needs quickly and resolving issues before they escalated.",
-    transferableSkills: ["Operational Excellence", "Leadership"],
+    transferableSkills: ["Operational Excellence", "Adaptability"],
     order: 3,
   },
 ];
@@ -120,7 +138,7 @@ export const education: EducationEntry[] = [
   {
     id: "edu-2",
     institution: "University",
-    qualification: "BA (Hons) Global Business",
+    qualification: "BA (Hons) Global Business — 2.1",
     dates: "2014",
     description:
       "Core business strategy, marketing principles, and international commerce.",
@@ -162,44 +180,44 @@ export const certifications: Certification[] = [
 export const projects: Project[] = [
   {
     id: "proj-1",
-    slug: "seo-website-audit",
-    title: "SEO Website Audit",
+    slug: "social-media-campaign",
+    title: "Social Media Marketing",
     description:
-      "A full technical and content SEO audit for a hospitality small business, identifying quick wins and a 90-day roadmap.",
-    problem: "Organic visibility had plateaued for two years.",
+      "A social media post designed in Canva for a pet day care business, built to drive awareness and create engagement across platforms.",
+    problem: "Low brand visibility on social channels for a local pet care business.",
     solution:
-      "Prioritised fixes across technical SEO, on-page content, and local search signals.",
-    tools: ["Google Search Console", "Screaming Frog", "Ahrefs"],
-    categories: ["SEO"],
+      "Created scroll-stopping visual content with clear CTAs, optimised for Instagram and Facebook reach.",
+    tools: ["Canva", "Meta Business Suite"],
+    categories: ["Social Media"],
     featured: true,
     order: 1,
     isDemo: true,
   },
   {
     id: "proj-2",
-    slug: "social-media-campaign",
-    title: "Social Media Campaign",
+    slug: "email-newsletter",
+    title: "Email Marketing — Newsletter",
     description:
-      "A 6-week Instagram and TikTok campaign concept built around guest storytelling for a boutique hotel brand.",
-    problem: "Low engagement despite a strong visual product.",
+      "A veterinary clinic newsletter designed to provide relevant news and information content to subscribers, building trust and long-term relationships.",
+    problem: "The clinic had no regular touchpoint with pet owners between visits.",
     solution:
-      "Shifted from polished promotional content to guest-story-driven short-form video.",
-    tools: ["Meta Business Suite", "CapCut", "Canva"],
-    categories: ["Social Media"],
+      "Designed a value-first newsletter with pet care tips, driving repeat bookings through an embedded appointment CTA.",
+    tools: ["Mailchimp"],
+    categories: ["Email Marketing"],
     featured: true,
     order: 2,
     isDemo: true,
   },
   {
     id: "proj-3",
-    slug: "email-marketing-campaign",
-    title: "Email Marketing Campaign",
+    slug: "promotional-email",
+    title: "Email Marketing — Promotional",
     description:
-      "A lifecycle email sequence concept for post-stay guest retention and repeat bookings.",
-    problem: "One-time guests rarely rebooked directly.",
+      "A promotional email for a wellness centre, designed to inform subscribers of a new offer and encourage them to take action.",
+    problem: "Low direct booking conversion from existing client base.",
     solution:
-      "Designed a 5-email nurture sequence with segmentation by stay type.",
-    tools: ["Mailchimp", "Figma"],
+      "Created a clear, on-brand promotional email with a time-limited discount code and a single strong CTA.",
+    tools: ["Mailchimp"],
     categories: ["Email Marketing"],
     featured: true,
     order: 3,
@@ -207,66 +225,51 @@ export const projects: Project[] = [
   },
   {
     id: "proj-4",
-    slug: "google-analytics-dashboard",
-    title: "Google Analytics Dashboard",
+    slug: "shopify-product-page",
+    title: "Shopify Product Page",
     description:
-      "A custom reporting dashboard translating raw analytics into decisions non-technical stakeholders could act on.",
-    problem: "Leadership couldn't interpret raw GA4 reports.",
+      "A product detail page created in Shopify based on a product specification sheet, designed to increase awareness, drive traffic, and increase conversions.",
+    problem: "Products listed without optimised descriptions or structured detail pages.",
     solution:
-      "Built a simplified dashboard highlighting the 5 metrics that mattered most.",
-    tools: ["GA4", "Looker Studio"],
-    categories: ["Data Analysis"],
-    featured: false,
+      "Built a conversion-focused product page with clear specifications, imagery, and purchase flow.",
+    tools: ["Shopify"],
+    categories: ["E-Commerce"],
+    featured: true,
     order: 4,
-    isDemo: true,
-  },
-  {
-    id: "proj-5",
-    slug: "content-marketing-strategy",
-    title: "Content Marketing Strategy",
-    description:
-      "A quarterly content strategy connecting hospitality expertise to top-of-funnel search demand.",
-    problem: "Content was produced ad hoc with no measurable goal.",
-    solution:
-      "Mapped content pillars to search intent and booking-funnel stage.",
-    tools: ["Ahrefs", "Notion"],
-    categories: ["Content Marketing"],
-    featured: false,
-    order: 5,
     isDemo: true,
   },
 ];
 
 export const whyHireCards: WhyHireCard[] = [
   {
-    title: "Customer-First Mindset",
+    title: "Strategic Experience",
+    description:
+      "Proven experience in CRM, supply chain coordination, and team leadership — I know how to make plans run.",
+  },
+  {
+    title: "Digital Proficiency",
+    description:
+      "Google Certified in Digital Marketing & E-Commerce, with hands-on project work across SEO, email, social, and analytics.",
+  },
+  {
+    title: "Academic Foundation",
+    description:
+      "Bachelor's degree in Global Business (2.1 hons), grounding every campaign in solid commercial thinking.",
+  },
+  {
+    title: "Data-Driven Mindset",
+    description:
+      "Fast-adapting and relentless in pursuing brand growth — I let the numbers guide the strategy.",
+  },
+  {
+    title: "Customer-First Approach",
     description:
       "A decade of reading what people need before they say it — the same instinct behind every good campaign.",
   },
   {
-    title: "Analytical Thinking",
+    title: "Human Centric Strategist",
     description:
-      "Comfortable turning raw feedback and data into a clear, prioritised action plan.",
-  },
-  {
-    title: "Fast Learner",
-    description:
-      "Self-directed a full career pivot, from certification to applied projects, in under a year.",
-  },
-  {
-    title: "Operations Experience",
-    description:
-      "Knows how to make a plan actually run — budgets, timelines, and teams included.",
-  },
-  {
-    title: "Digital Marketing Knowledge",
-    description:
-      "Google-certified across SEO, analytics, email, and social, with hands-on project work.",
-  },
-  {
-    title: "Adaptability",
-    description:
-      "Hospitality means the plan changes hourly. Comfortable adjusting strategy in real time.",
+      "My purpose is to build authentic connections between brands and the communities they serve.",
   },
 ];
 
