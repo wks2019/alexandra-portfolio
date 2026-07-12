@@ -1,21 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Download, TrendingUp, Users, MousePointerClick } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { hero as heroFallback } from "@/lib/content/site-content";
 import { useLiveSingleton } from "@/hooks/use-live-content";
 import type { HeroContent } from "@/lib/types";
-
-/* Animated bar chart inside the hero card: a "campaign growth" visual */
-const bars = [34, 52, 44, 68, 58, 82, 74, 96];
-
-const metricRows = [
-  { icon: Users, label: "Audience reach", value: "+128%" },
-  { icon: MousePointerClick, label: "Engagement rate", value: "+64%" },
-  { icon: TrendingUp, label: "Conversions", value: "+41%" },
-];
 
 export function Hero() {
   const hero = useLiveSingleton<HeroContent>("hero_content", heroFallback, (r) => ({
@@ -36,7 +28,7 @@ export function Hero() {
         }}
       />
 
-      <div className="container-page grid items-center gap-16 md:grid-cols-[1.05fr_0.95fr]">
+      <div className="container-page grid items-center gap-6 md:grid-cols-[1.05fr_0.95fr]">
         <div>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -92,85 +84,21 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Animated campaign dashboard card */}
+        {/* Portfolio collage, blended into the cream background */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 16 }}
+          initial={{ opacity: 0, scale: 0.97, y: 16 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="keycard relative mx-auto w-full max-w-md overflow-hidden bg-gradient-to-br from-[#FF6700] via-[#F4530A] to-[#EB4203] p-6 shadow-xl md:p-7"
+          className="relative -mr-6 md:-mr-10"
         >
-          {/* Slow pulsing glow */}
-          <motion.div
-            aria-hidden
-            animate={{ opacity: [0.25, 0.5, 0.25] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="pointer-events-none absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(50% 40% at 20% 15%, rgba(255,220,170,0.55), transparent), radial-gradient(40% 35% at 85% 80%, rgba(255,255,255,0.25), transparent)",
-            }}
+          <Image
+            src="/hero-collage.jpg"
+            alt="Alexandra Vlasceanu's digital marketing portfolio slides, laid out as a collage"
+            width={1500}
+            height={1228}
+            priority
+            className="h-auto w-[112%] max-w-none"
           />
-
-          <div className="relative">
-            <div className="flex items-center justify-between">
-              <p className="font-mono text-[11px] uppercase tracking-widest text-white/75">
-                Campaign Growth
-              </p>
-              <span className="rounded-full bg-white/15 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-white">
-                Live
-              </span>
-            </div>
-
-            {/* Animated bars */}
-            <div className="mt-6 flex h-32 items-end gap-2.5">
-              {bars.map((h, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ height: "8%" }}
-                  animate={{ height: `${h}%` }}
-                  transition={{
-                    duration: 0.9,
-                    delay: 0.5 + i * 0.09,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                  className="flex-1 rounded-t-md bg-white/85"
-                  style={{ opacity: 0.55 + (i / bars.length) * 0.45 }}
-                />
-              ))}
-            </div>
-
-            {/* Metric rows */}
-            <div className="mt-6 space-y-2.5">
-              {metricRows.map((row, i) => (
-                <motion.div
-                  key={row.label}
-                  initial={{ opacity: 0, x: -12 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 1.1 + i * 0.15 }}
-                  className="flex items-center justify-between rounded-xl bg-white/12 px-4 py-2.5 backdrop-blur-sm"
-                >
-                  <span className="flex items-center gap-2.5 text-sm text-white/90">
-                    <row.icon className="size-4 text-white/70" />
-                    {row.label}
-                  </span>
-                  <span className="font-mono text-sm font-medium text-white">
-                    {row.value}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Purpose line inside the card, nothing overlapping it */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 1.7 }}
-              className="mt-6 border-t border-white/20 pt-4 text-sm italic text-white/85"
-            >
-              &ldquo;Building authentic connections between brands &amp; the
-              communities they serve.&rdquo;
-            </motion.p>
-          </div>
         </motion.div>
       </div>
     </section>
