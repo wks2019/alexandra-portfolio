@@ -1,27 +1,16 @@
 "use client";
 
-import { useActionState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { submitContactMessage, type ContactFormState } from "@/app/actions/contact";
 import { SITE } from "@/lib/site-config";
 
-const initialState: ContactFormState = { status: "idle" };
-
 export function Contact() {
-  const [state, formAction, isPending] = useActionState(
-    submitContactMessage,
-    initialState
-  );
-  const formRef = useRef<HTMLFormElement>(null);
-
-  useEffect(() => {
-    if (state.status === "success") formRef.current?.reset();
-  }, [state.status]);
+  const [submitted, setSubmitted] = useState(false);
 
   return (
     <section id="contact" className="py-24 md:py-32">
@@ -57,52 +46,38 @@ export function Contact() {
 
         <Reveal delay={0.1}>
           <form
-            ref={formRef}
-            action={formAction}
+            action={`https://formsubmit.co/${SITE.email}`}
+            method="POST"
+            onSubmit={() => setSubmitted(true)}
             className="keycard space-y-5 border border-border/60 bg-card p-7 md:p-8"
-            noValidate
           >
-            {/* Honeypot — hidden from real users */}
-            <div className="hidden">
-              <Label htmlFor="company">Company</Label>
-              <Input id="company" name="company" tabIndex={-1} autoComplete="off" />
-            </div>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://alexandra-vlasceanu-portfolio.netlify.app/#contact" />
+            <input type="text" name="_honey" style={{ display: "none" }} />
 
             <div>
               <Label htmlFor="name">Name</Label>
               <Input id="name" name="name" className="mt-1.5" required />
-              {state.fieldErrors?.name && (
-                <p className="mt-1.5 text-xs text-destructive">{state.fieldErrors.name}</p>
-              )}
             </div>
 
             <div>
               <Label htmlFor="email">Email</Label>
               <Input id="email" name="email" type="email" className="mt-1.5" required />
-              {state.fieldErrors?.email && (
-                <p className="mt-1.5 text-xs text-destructive">{state.fieldErrors.email}</p>
-              )}
             </div>
 
             <div>
               <Label htmlFor="message">Message</Label>
               <Textarea id="message" name="message" rows={5} className="mt-1.5" required />
-              {state.fieldErrors?.message && (
-                <p className="mt-1.5 text-xs text-destructive">{state.fieldErrors.message}</p>
-              )}
             </div>
 
-            <Button type="submit" disabled={isPending} className="w-full rounded-full">
-              {isPending ? "Sending…" : "Send Message"}
+            <Button type="submit" className="w-full rounded-full">
+              {submitted ? "Sent!" : "Send Message"}
             </Button>
 
-            {state.status === "success" && (
+            {submitted && (
               <p className="text-center text-sm text-primary">
                 Message sent — thank you. I&apos;ll reply within 48 hours.
               </p>
-            )}
-            {state.status === "error" && state.message && (
-              <p className="text-center text-sm text-destructive">{state.message}</p>
             )}
           </form>
         </Reveal>
