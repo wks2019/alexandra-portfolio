@@ -32,6 +32,7 @@ export function Experience() {
 
         <div className="mt-14 space-y-5">
           {experience
+            .filter((entry) => entry.role.trim() !== "")
             .slice()
             .sort((a, b) => a.order - b.order)
             .map((entry, i) => (

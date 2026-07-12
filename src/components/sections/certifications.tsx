@@ -25,7 +25,9 @@ export function Certifications() {
         </Reveal>
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {certifications.map((cert, i) => (
+          {certifications
+            .filter((cert) => cert.name.trim() !== "")
+            .map((cert, i) => (
             <Reveal key={cert.id} delay={i * 0.06}>
               <a
                 href={cert.credentialUrl}

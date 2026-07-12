@@ -15,11 +15,17 @@ type Row = Record<string, unknown> & { id: string | number };
 /* Field definitions per table. type: text | textarea | array */
 const TABLES: Record<
   string,
-  { label: string; orderBy?: string; fields: { key: string; label: string; type: "text" | "textarea" | "array" }[] }
+  {
+    label: string;
+    orderBy?: string;
+    requiredField: string;
+    fields: { key: string; label: string; type: "text" | "textarea" | "array" }[];
+  }
 > = {
   timeline_entries: {
     label: "Story Timeline",
     orderBy: "display_order",
+    requiredField: "title",
     fields: [
       { key: "year", label: "Year", type: "text" },
       { key: "title", label: "Title", type: "text" },
@@ -29,6 +35,7 @@ const TABLES: Record<
   experience_entries: {
     label: "Experience",
     orderBy: "display_order",
+    requiredField: "role",
     fields: [
       { key: "company", label: "Company", type: "text" },
       { key: "role", label: "Role", type: "text" },
@@ -41,6 +48,7 @@ const TABLES: Record<
   education_entries: {
     label: "Education",
     orderBy: "display_order",
+    requiredField: "qualification",
     fields: [
       { key: "institution", label: "Institution", type: "text" },
       { key: "qualification", label: "Qualification", type: "text" },
@@ -51,6 +59,7 @@ const TABLES: Record<
   certifications: {
     label: "Certifications",
     orderBy: "display_order",
+    requiredField: "name",
     fields: [
       { key: "name", label: "Name", type: "text" },
       { key: "provider", label: "Provider", type: "text" },
@@ -153,26 +162,49 @@ function TableEditor({ table }: { table: keyof typeof TABLES }) {
     );
   }
 
+  function isDraft(id: Row["id"]) {
+    return String(id).startsWith("draft-");
+  }
+
   async function saveRow(row: Row) {
+    const requiredValue = String(row[cfg.requiredField] ?? "").trim();
+    if (!requiredValue) {
+      setStatus(
+        `Error: "${cfg.fields.find((f) => f.key === cfg.requiredField)?.label}" is required before saving.`
+      );
+      return;
+    }
     setStatus("Saving…");
-    const { error } = await supabase.from(table).upsert(row);
-    setStatus(error ? `Error: ${error.message}` : "Saved");
+    if (isDraft(row.id)) {
+      const { id, ...rest } = row;
+      void id;
+      const { error } = await supabase.from(table).insert(rest);
+      setStatus(error ? `Error: ${error.message}` : "Saved");
+      if (!error) load();
+    } else {
+      const { error } = await supabase.from(table).upsert(row);
+      setStatus(error ? `Error: ${error.message}` : "Saved");
+    }
   }
 
   async function deleteRow(id: Row["id"]) {
+    if (isDraft(id)) {
+      setRows((rs) => rs.filter((r) => r.id !== id));
+      return;
+    }
     if (!confirm("Delete this entry?")) return;
     await supabase.from(table).delete().eq("id", id);
     load();
   }
 
-  async function addRow() {
-    const blank: Record<string, unknown> = {
+  function addRow() {
+    const draft: Row = {
+      id: `draft-${Date.now()}`,
       display_order: rows.length + 1,
     };
-    for (const f of cfg.fields) blank[f.key] = f.type === "array" ? [] : "";
-    const { error } = await supabase.from(table).insert(blank);
-    if (error) setStatus(`Error: ${error.message}`);
-    load();
+    for (const f of cfg.fields) draft[f.key] = f.type === "array" ? [] : "";
+    setRows((rs) => [...rs, draft]);
+    setStatus("");
   }
 
   return (

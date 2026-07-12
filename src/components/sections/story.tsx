@@ -31,8 +31,10 @@ export function Story() {
             className="absolute left-[27px] top-2 bottom-2 w-px bg-border md:left-[35px]"
           />
           <ol className="space-y-10">
-            {storyTimeline.map((entry, i) => (
-              <Reveal key={entry.year} delay={i * 0.06}>
+            {storyTimeline
+              .filter((entry) => entry.title.trim() !== "")
+              .map((entry, i) => (
+              <Reveal key={`${entry.year}-${i}`} delay={i * 0.06}>
                 <li className="relative flex gap-6 md:gap-8">
                   <div className="relative z-10 flex size-14 shrink-0 items-center justify-center rounded-full border border-brass/40 bg-card font-mono text-xs text-brass md:size-[70px] md:text-sm">
                     {entry.year}

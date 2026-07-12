@@ -25,7 +25,9 @@ export function Education() {
         </Reveal>
 
         <div className="mt-14 grid gap-5 md:grid-cols-3">
-          {education.map((entry, i) => (
+          {education
+            .filter((entry) => entry.qualification.trim() !== "")
+            .map((entry, i) => (
             <Reveal key={entry.id} delay={i * 0.06}>
               <div className="keycard flex h-full flex-col border border-border/60 bg-card p-6">
                 <GraduationCap className="size-6 text-brass" />
