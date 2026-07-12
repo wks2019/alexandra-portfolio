@@ -20,7 +20,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(60% 50% at 80% 10%, rgba(212,168,154,0.18), transparent), radial-gradient(50% 40% at 10% 30%, rgba(176,141,87,0.12), transparent)",
+            "radial-gradient(60% 50% at 80% 10%, rgba(255,127,80,0.22), transparent), radial-gradient(50% 40% at 10% 30%, rgba(255,103,0,0.12), transparent)",
         }}
       />
 
@@ -85,14 +85,14 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="keycard relative h-full w-full overflow-hidden bg-gradient-to-br from-[#3B2820] via-[#5A3D30] to-[#3B2820] shadow-xl"
+            className="keycard relative h-full w-full overflow-hidden bg-gradient-to-br from-[#FF6700] via-[#F4530A] to-[#EB4203] shadow-xl"
           >
             <div
               aria-hidden
               className="absolute inset-0 opacity-40"
               style={{
                 background:
-                  "radial-gradient(45% 35% at 25% 20%, rgba(212,168,154,0.5), transparent), radial-gradient(35% 30% at 75% 70%, rgba(176,141,87,0.4), transparent)",
+                  "radial-gradient(45% 35% at 25% 20%, rgba(255,215,150,0.45), transparent), radial-gradient(35% 30% at 75% 70%, rgba(255,127,80,0.5), transparent)",
               }}
             />
             <div className="absolute inset-x-6 bottom-6 rounded-2xl bg-white/10 p-4 backdrop-blur-sm">

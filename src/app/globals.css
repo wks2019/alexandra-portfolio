@@ -55,7 +55,7 @@
 
 :root {
   /* Warm cream base — matching Alexandra's portfolio aesthetic */
-  --background: #FAF5EE;
+  --background: #FFF8F2;
   --foreground: #3B2820;
   --ink: #3B2820;
   --card: #FFFFFF;
@@ -64,45 +64,45 @@
   --popover-foreground: #3B2820;
 
   /* Deep warm brown primary — from the portfolio typography */
-  --primary: #3B2820;
-  --primary-foreground: #FAF5EE;
+  --primary: #EB4203;
+  --primary-foreground: #FFF8F2;
 
-  --secondary: #F3EBE0;
+  --secondary: #FCEDE3;
   --secondary-foreground: #3B2820;
 
-  --muted: #F0E8DC;
+  --muted: #FAEADD;
   --muted-foreground: #7A6B5D;
 
-  --accent: #EDE4D6;
-  --accent-foreground: #3B2820;
+  --accent: #FFE8D6;
+  --accent-foreground: #B33202;
 
   /* Brass/gold — from the portfolio's golden flowing lines */
-  --brass: #B08D57;
-  --brass-foreground: #FAF5EE;
+  --brass: #FF6700;
+  --brass-foreground: #FFF8F2;
   /* Blush — from the portfolio's warm pink tones */
-  --blush: #D4A89A;
+  --blush: #FF7F50;
 
   --destructive: #B3452F;
-  --border: #E6DACE;
-  --input: #E6DACE;
-  --ring: #B08D57;
+  --border: #F3DCC9;
+  --input: #F3DCC9;
+  --ring: #FF6700;
 
-  --chart-1: #3B2820;
-  --chart-2: #B08D57;
+  --chart-1: #EB4203;
+  --chart-2: #FF6700;
   --chart-3: #7A6B5D;
-  --chart-4: #D4A89A;
+  --chart-4: #FF7F50;
   --chart-5: #D9C9A8;
 
   --radius: 1.1rem;
 
   --sidebar: #FFFFFF;
   --sidebar-foreground: #3B2820;
-  --sidebar-primary: #3B2820;
+  --sidebar-primary: #EB4203;
   --sidebar-primary-foreground: #FAF5EE;
   --sidebar-accent: #EDE4D6;
   --sidebar-accent-foreground: #3B2820;
   --sidebar-border: #E6DACE;
-  --sidebar-ring: #B08D57;
+  --sidebar-ring: #FF6700;
 }
 
 @layer base {
