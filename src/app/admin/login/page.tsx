@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { SITE } from "@/lib/site-config";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -32,7 +34,13 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-background px-6">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-background px-6">
+      <Link
+        href="/"
+        className="mb-6 font-heading text-xl text-foreground hover:text-primary"
+      >
+        {SITE.name}
+      </Link>
       <form
         onSubmit={handleLogin}
         className="keycard w-full max-w-sm border border-border/60 bg-card p-8"
