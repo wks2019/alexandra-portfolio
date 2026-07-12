@@ -4,7 +4,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Download, TrendingUp, Users, MousePointerClick } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
-import { hero } from "@/lib/content/site-content";
+import { hero as heroFallback } from "@/lib/content/site-content";
+import { useLiveSingleton } from "@/hooks/use-live-content";
+import type { HeroContent } from "@/lib/types";
 
 /* Animated bar chart inside the hero card: a "campaign growth" visual */
 const bars = [34, 52, 44, 68, 58, 82, 74, 96];
@@ -16,6 +18,13 @@ const metricRows = [
 ];
 
 export function Hero() {
+  const hero = useLiveSingleton<HeroContent>("hero_content", heroFallback, (r) => ({
+    eyebrow: String(r.eyebrow ?? heroFallback.eyebrow),
+    headline: String(r.headline ?? heroFallback.headline),
+    subheadline: String(r.subheadline ?? heroFallback.subheadline),
+    primaryCta: { label: String(r.primary_cta_label || heroFallback.primaryCta.label), href: String(r.primary_cta_href || heroFallback.primaryCta.href) },
+    secondaryCta: { label: String(r.secondary_cta_label || heroFallback.secondaryCta.label), href: String(r.secondary_cta_href || heroFallback.secondaryCta.href) },
+  }));
   return (
     <section className="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32">
       <div

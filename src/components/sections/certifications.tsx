@@ -1,8 +1,19 @@
+"use client";
+
 import { BadgeCheck, ExternalLink } from "lucide-react";
+import { useLiveContent } from "@/hooks/use-live-content";
+import type { Certification } from "@/lib/types";
 import { Reveal } from "@/components/motion/reveal";
-import { certifications } from "@/lib/content/site-content";
+import { certifications as certsFallback } from "@/lib/content/site-content";
 
 export function Certifications() {
+  const certifications = useLiveContent<Certification>("certifications", certsFallback, (r) => ({
+    id: String(r.id ?? ""),
+    name: String(r.name ?? ""),
+    provider: String(r.provider ?? ""),
+    issueDate: String(r.issue_date ?? ""),
+    credentialUrl: String(r.credential_url ?? "#"),
+  }));
   return (
     <section className="py-24 md:py-32">
       <div className="container-page">

@@ -1,8 +1,19 @@
+"use client";
+
 import { GraduationCap } from "lucide-react";
+import { useLiveContent } from "@/hooks/use-live-content";
+import type { EducationEntry } from "@/lib/types";
 import { Reveal } from "@/components/motion/reveal";
-import { education } from "@/lib/content/site-content";
+import { education as educationFallback } from "@/lib/content/site-content";
 
 export function Education() {
+  const education = useLiveContent<EducationEntry>("education_entries", educationFallback, (r) => ({
+    id: String(r.id ?? ""),
+    institution: String(r.institution ?? ""),
+    qualification: String(r.qualification ?? ""),
+    dates: String(r.dates ?? ""),
+    description: String(r.description ?? ""),
+  }));
   return (
     <section className="bg-secondary/40 py-24 md:py-32">
       <div className="container-page">

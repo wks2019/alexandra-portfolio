@@ -1,8 +1,22 @@
+"use client";
+
 import { Reveal } from "@/components/motion/reveal";
+import { useLiveContent } from "@/hooks/use-live-content";
+import type { ExperienceEntry } from "@/lib/types";
 import { Badge } from "@/components/ui/badge";
-import { experience } from "@/lib/content/site-content";
+import { experience as experienceFallback } from "@/lib/content/site-content";
 
 export function Experience() {
+  const experience = useLiveContent<ExperienceEntry>("experience_entries", experienceFallback, (r, i = 0) => ({
+    id: String(r.id ?? i),
+    company: String(r.company ?? ""),
+    role: String(r.role ?? ""),
+    startDate: String(r.start_date ?? ""),
+    endDate: String(r.end_date ?? ""),
+    summary: String(r.description ?? ""),
+    transferableSkills: Array.isArray(r.transferable_skills) ? (r.transferable_skills as string[]) : [],
+    order: Number(r.display_order ?? 0),
+  }));
   return (
     <section id="experience" className="py-24 md:py-32">
       <div className="container-page">

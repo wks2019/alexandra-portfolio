@@ -1,7 +1,16 @@
+"use client";
+
 import { Reveal } from "@/components/motion/reveal";
-import { storyTimeline } from "@/lib/content/site-content";
+import { useLiveContent } from "@/hooks/use-live-content";
+import type { TimelineEntry } from "@/lib/types";
+import { storyTimeline as timelineFallback } from "@/lib/content/site-content";
 
 export function Story() {
+  const storyTimeline = useLiveContent<TimelineEntry>("timeline_entries", timelineFallback, (r) => ({
+    year: String(r.year ?? ""),
+    title: String(r.title ?? ""),
+    description: String(r.description ?? ""),
+  }));
   return (
     <section id="story" className="py-24 md:py-32">
       <div className="container-page">

@@ -7,10 +7,26 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { createClient } from "@/lib/supabase/client";
 import { SITE } from "@/lib/site-config";
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    // Save to Supabase (fire-and-forget), then let FormSubmit email it
+    const fd = new FormData(e.currentTarget);
+    const supabase = createClient();
+    supabase
+      .from("contact_messages")
+      .insert({
+        name: String(fd.get("name") ?? ""),
+        email: String(fd.get("email") ?? ""),
+        message: String(fd.get("message") ?? ""),
+      })
+      .then(() => {});
+    setSubmitted(true);
+  }
 
   return (
     <section id="contact" className="py-24 md:py-32">
@@ -48,7 +64,7 @@ export function Contact() {
           <form
             action={`https://formsubmit.co/${SITE.email}`}
             method="POST"
-            onSubmit={() => setSubmitted(true)}
+            onSubmit={handleSubmit}
             className="keycard space-y-5 border border-border/60 bg-card p-7 md:p-8"
           >
             <input type="hidden" name="_captcha" value="false" />
