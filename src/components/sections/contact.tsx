@@ -76,7 +76,7 @@ export function Contact() {
 
             {submitted && (
               <p className="text-center text-sm text-primary">
-                Message sent — thank you. I&apos;ll reply within 48 hours.
+                Message sent. Thank you, I&apos;ll reply within 48 hours.
               </p>
             )}
           </form>

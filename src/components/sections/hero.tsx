@@ -6,7 +6,7 @@ import { ArrowRight, Download, TrendingUp, Users, MousePointerClick } from "luci
 import { buttonVariants } from "@/components/ui/button";
 import { hero } from "@/lib/content/site-content";
 
-/* Animated bar chart inside the hero card — a "campaign growth" visual */
+/* Animated bar chart inside the hero card: a "campaign growth" visual */
 const bars = [34, 52, 44, 68, 58, 82, 74, 96];
 
 const metricRows = [
@@ -151,7 +151,7 @@ export function Hero() {
               ))}
             </div>
 
-            {/* Purpose line — inside the card, nothing overlapping it */}
+            {/* Purpose line inside the card, nothing overlapping it */}
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

@@ -14,7 +14,7 @@ export function Skills() {
         <Reveal>
           <p className="eyebrow">Capabilities</p>
           <h2 className="mt-4 max-w-xl text-balance text-3xl font-medium tracking-tight md:text-4xl">
-            What I bring to a marketing team
+            What I bring to the table
           </h2>
         </Reveal>
 

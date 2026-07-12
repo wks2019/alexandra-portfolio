@@ -54,7 +54,7 @@
 }
 
 :root {
-  /* Warm cream base — matching Alexandra's portfolio aesthetic */
+  /* Warm cream base: matching Alexandra's portfolio aesthetic */
   --background: #FFF8F2;
   --foreground: #3B2820;
   --ink: #3B2820;
@@ -63,7 +63,7 @@
   --popover: #FFFFFF;
   --popover-foreground: #3B2820;
 
-  /* Deep warm brown primary — from the portfolio typography */
+  /* Deep warm brown primary: from the portfolio typography */
   --primary: #EB4203;
   --primary-foreground: #FFF8F2;
 
@@ -76,10 +76,10 @@
   --accent: #FFE8D6;
   --accent-foreground: #B33202;
 
-  /* Brass/gold — from the portfolio's golden flowing lines */
+  /* Brass/gold: from the portfolio's golden flowing lines */
   --brass: #FF6700;
   --brass-foreground: #FFF8F2;
-  /* Blush — from the portfolio's warm pink tones */
+  /* Blush: from the portfolio's warm pink tones */
   --blush: #FF7F50;
 
   --destructive: #B3452F;

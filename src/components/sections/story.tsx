@@ -11,7 +11,7 @@ export function Story() {
             From Hospitality to Digital Marketing
           </h2>
           <p className="mt-4 max-w-xl text-muted-foreground">
-            Ten years of reading people. Now reading data — with the same
+            Ten years of reading people. Now I read data with the same
             instinct for what matters.
           </p>
         </Reveal>

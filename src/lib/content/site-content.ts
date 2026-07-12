@@ -14,7 +14,7 @@ export const hero: HeroContent = {
   eyebrow: "Human Centric Strategist",
   headline: "Humanising Digital Interactions Through Real-World Insight.",
   subheadline:
-    "I believe the best digital marketing is rooted in a deep understanding of the customer — a skill I honed across a decade in fast-paced hospitality. Now I create campaigns that don't just reach audiences; they resonate with them.",
+    "I believe that the best digital marketing is rooted in a deep understanding of the customer, a skill I honed during my years in fast-paced hospitality. I create campaigns that don't just reach audiences; they resonate with them.",
   primaryCta: { label: "View My Work", href: "#work" },
   secondaryCta: { label: "Download CV", href: "/cv.pdf" },
 };
@@ -24,31 +24,31 @@ export const storyTimeline: TimelineEntry[] = [
     year: "2014",
     title: "Hospitality Foundations",
     description:
-      "Started in guest-facing roles, mastering clear communication and rapid adaptability — learning to anticipate needs and deliver exceptional experiences.",
+      "I started in guest-facing roles and mastered the art of clear communication and rapid adaptability. I learned how to anticipate needs and deliver exceptional experiences.",
   },
   {
     year: "2018",
     title: "Operations & Team Leadership",
     description:
-      "Moved into CRM, supply chain coordination, and team leadership — translating guest feedback into operational improvements.",
+      "I moved into CRM, supply chain coordination and team leadership, turning guest feedback into real operational improvements.",
   },
   {
     year: "2023",
     title: "The Digital Pivot",
     description:
-      "Started asking why customers behaved the way they did, not just how to serve them. That question led straight to marketing and analytics.",
+      "I started asking why customers behaved the way they did, not just how to serve them. That question led me straight to marketing and analytics.",
   },
   {
     year: "2024",
     title: "Google Certified",
     description:
-      "Completed the Google Digital Marketing & E-commerce Professional Certificate — formalising skills in SEO, analytics, email, and social media.",
+      "I dived deep into the digital landscape through the Google Digital Marketing & E-Commerce Certification, covering SEO, analytics, email and social media.",
   },
   {
     year: "Now",
-    title: "Career Transition",
+    title: "Ready for the Next Chapter",
     description:
-      "Seeking an entry-level role where I can apply my background in customer insights to create high-impact, scalable marketing campaigns.",
+      "I'm currently seeking an entry-level role where I can apply my background in customer insights to create high-impact, scalable marketing campaigns.",
   },
 ];
 
@@ -87,7 +87,7 @@ export const experience: ExperienceEntry[] = [
     startDate: "2020",
     endDate: "Present",
     summary:
-      "Owned the end-to-end guest journey for a premium property, using feedback data to drive service and operational improvements.",
+      "I owned the end-to-end guest journey for a premium property, using feedback data to drive service and operational improvements.",
     transferableSkills: [
       "Customer Insight",
       "CRM",
@@ -103,7 +103,7 @@ export const experience: ExperienceEntry[] = [
     startDate: "2017",
     endDate: "2020",
     summary:
-      "Trained and led a service team, standardising communication and turning recurring issues into fixed processes. Managed supply chain coordination.",
+      "I trained and led a service team, standardised communication and turned recurring issues into fixed processes, while managing supply chain coordination.",
     transferableSkills: [
       "Team Leadership",
       "Supply Chain Coordination",
@@ -119,7 +119,7 @@ export const experience: ExperienceEntry[] = [
     startDate: "2014",
     endDate: "2017",
     summary:
-      "First-line guest contact — built the instinct for reading needs quickly and resolving issues before they escalated.",
+      "As first-line guest contact, I built the instinct for reading needs quickly and resolving issues before they escalated. Success lies in the details.",
     transferableSkills: ["Operational Excellence", "Adaptability"],
     order: 3,
   },
@@ -130,18 +130,18 @@ export const education: EducationEntry[] = [
     id: "edu-1",
     institution: "Google",
     qualification:
-      "Digital Marketing & E-commerce Professional Certificate",
+      "Digital Marketing & E-Commerce Professional Certificate",
     dates: "2024",
     description:
-      "SEO, SEM, analytics, email marketing, social media, and e-commerce fundamentals.",
+      "SEO, SEM, analytics, email marketing, social media and e-commerce fundamentals.",
   },
   {
     id: "edu-2",
     institution: "University",
-    qualification: "BA (Hons) Global Business — 2.1",
+    qualification: "BA (Hons) Global Business, 2.1",
     dates: "2014",
     description:
-      "Core business strategy, marketing principles, and international commerce.",
+      "Core business strategy, marketing principles and international commerce.",
   },
   {
     id: "edu-3",
@@ -149,14 +149,14 @@ export const education: EducationEntry[] = [
     qualification: "HND International Travel & Tourism Management",
     dates: "2012",
     description:
-      "Foundations in service operations, customer psychology, and hospitality management.",
+      "Foundations in service operations, customer psychology and hospitality management.",
   },
 ];
 
 export const certifications: Certification[] = [
   {
     id: "cert-1",
-    name: "Digital Marketing & E-commerce Professional Certificate",
+    name: "Digital Marketing & E-Commerce Professional Certificate",
     provider: "Google",
     issueDate: "2024",
     credentialUrl: "#",
@@ -183,10 +183,10 @@ export const projects: Project[] = [
     slug: "social-media-campaign",
     title: "Social Media Marketing",
     description:
-      "A social media post designed in Canva for a pet day care business, built to drive awareness and create engagement across platforms.",
+      "A social media post made in Canva for a pet day care business, designed to drive awareness and create engagement.",
     problem: "Low brand visibility on social channels for a local pet care business.",
     solution:
-      "Created scroll-stopping visual content with clear CTAs, optimised for Instagram and Facebook reach.",
+      "I created scroll-stopping visual content with clear calls to action, optimised for Instagram and Facebook reach.",
     tools: ["Canva", "Meta Business Suite"],
     categories: ["Social Media"],
     featured: true,
@@ -196,12 +196,12 @@ export const projects: Project[] = [
   {
     id: "proj-2",
     slug: "email-newsletter",
-    title: "Email Marketing — Newsletter",
+    title: "Email Marketing: Newsletter",
     description:
-      "A veterinary clinic newsletter designed to provide relevant news and information content to subscribers, building trust and long-term relationships.",
+      "A veterinary clinic newsletter that provides relevant news and information content to subscribers. The purpose is to advertise, educate, inform, build trust and create relationships.",
     problem: "The clinic had no regular touchpoint with pet owners between visits.",
     solution:
-      "Designed a value-first newsletter with pet care tips, driving repeat bookings through an embedded appointment CTA.",
+      "I designed a value-first newsletter with pet care tips, driving repeat bookings through an embedded appointment button.",
     tools: ["Mailchimp"],
     categories: ["Email Marketing"],
     featured: true,
@@ -211,12 +211,12 @@ export const projects: Project[] = [
   {
     id: "proj-3",
     slug: "promotional-email",
-    title: "Email Marketing — Promotional",
+    title: "Email Marketing: Promotional",
     description:
-      "A promotional email for a wellness centre, designed to inform subscribers of a new offer and encourage them to take action.",
-    problem: "Low direct booking conversion from existing client base.",
+      "A promotional email for a wellness centre. The purpose is to encourage customers to take action and speed the buying process by reaching out to new and existing customers.",
+    problem: "Low direct booking conversion from the existing client base.",
     solution:
-      "Created a clear, on-brand promotional email with a time-limited discount code and a single strong CTA.",
+      "I created a clear, on-brand promotional email with a time-limited discount code and one strong call to action.",
     tools: ["Mailchimp"],
     categories: ["Email Marketing"],
     featured: true,
@@ -228,10 +228,10 @@ export const projects: Project[] = [
     slug: "shopify-product-page",
     title: "Shopify Product Page",
     description:
-      "A product detail page created in Shopify based on a product specification sheet, designed to increase awareness, drive traffic, and increase conversions.",
+      "Based on a product specification sheet, I created a product detail page in Shopify. The purpose is to increase awareness, drive traffic and increase conversions.",
     problem: "Products listed without optimised descriptions or structured detail pages.",
     solution:
-      "Built a conversion-focused product page with clear specifications, imagery, and purchase flow.",
+      "I built a conversion-focused product page with clear specifications, imagery and a smooth purchase flow.",
     tools: ["Shopify"],
     categories: ["E-Commerce"],
     featured: true,
@@ -244,32 +244,32 @@ export const whyHireCards: WhyHireCard[] = [
   {
     title: "Strategic Experience",
     description:
-      "Proven experience in CRM, supply chain coordination, and team leadership — I know how to make plans run.",
+      "Proven experience in CRM, supply chain coordination and team leadership. I know how to make plans actually run.",
   },
   {
     title: "Digital Proficiency",
     description:
-      "Google Certified in Digital Marketing & E-Commerce, with hands-on project work across SEO, email, social, and analytics.",
+      "Google Certified in Digital Marketing & E-Commerce, with hands-on project work across SEO, email, social and analytics.",
   },
   {
     title: "Academic Foundation",
     description:
-      "Bachelor's degree in Global Business (2.1 hons), grounding every campaign in solid commercial thinking.",
+      "A Bachelor's degree in Global Business (2.1 hons) grounds every campaign in solid commercial thinking.",
   },
   {
     title: "Data-Driven Mindset",
     description:
-      "Fast-adapting and relentless in pursuing brand growth — I let the numbers guide the strategy.",
+      "Fast-adapting and relentless in pursuing brand growth. I let the numbers guide the strategy.",
   },
   {
     title: "Customer-First Approach",
     description:
-      "A decade of reading what people need before they say it — the same instinct behind every good campaign.",
+      "Years of reading what people need before they say it. That same instinct sits behind every good campaign.",
   },
   {
-    title: "Human Centric Strategist",
+    title: "High-Energy Problem Solver",
     description:
-      "My purpose is to build authentic connections between brands and the communities they serve.",
+      "I'm a high-energy, creative problem solver, eager to apply this unique perspective to help your brand achieve sustainable digital growth.",
   },
 ];
 

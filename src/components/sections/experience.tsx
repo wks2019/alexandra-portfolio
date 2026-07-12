@@ -12,7 +12,7 @@ export function Experience() {
             A decade of hospitality, translated
           </h2>
           <p className="mt-4 max-w-xl text-muted-foreground">
-            Not job descriptions — the skills underneath them.
+            Not job descriptions: the skills underneath them.
           </p>
         </Reveal>
 
@@ -25,7 +25,7 @@ export function Experience() {
                 <div className="keycard grid gap-4 border border-border/60 bg-card p-6 md:grid-cols-[1fr_2fr] md:p-8">
                   <div>
                     <p className="font-mono text-xs text-muted-foreground">
-                      {entry.startDate} — {entry.endDate}
+                      {entry.startDate} – {entry.endDate}
                     </p>
                     <h3 className="mt-2 font-heading text-xl font-medium">
                       {entry.role}

@@ -2,7 +2,7 @@ export const SITE = {
   name: "Alexandra Vlasceanu",
   tagline: "Human Centric Strategist",
   description:
-    "I believe the best digital marketing is rooted in a deep understanding of the customer. A decade in hospitality taught me to read people — now I read data with the same instinct.",
+    "I believe that the best digital marketing is rooted in a deep understanding of the customer. Hospitality taught me to read people, and now I read data with the same instinct.",
   url: "https://alexandravlasceanu.com",
   email: "ralexandra24.ra@gmail.com",
   phone: "07595331658",
