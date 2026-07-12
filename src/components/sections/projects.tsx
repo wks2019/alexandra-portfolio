@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Badge } from "@/components/ui/badge";
@@ -25,7 +26,7 @@ export function Projects() {
         <div className="mt-14 grid gap-5 md:grid-cols-2">
           {featured.map((project, i) => (
             <Reveal key={project.id} delay={i * 0.06}>
-              <article className="keycard group h-full border border-border/60 bg-card p-7 transition-all hover:-translate-y-1 hover:shadow-lg">
+              <Link href={`/work/${project.slug}`} className="keycard group block h-full border border-border/60 bg-card p-7 transition-all hover:-translate-y-1 hover:shadow-lg">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex flex-wrap gap-1.5">
                     {project.categories.map((c) => (
@@ -74,7 +75,7 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
-              </article>
+              </Link>
             </Reveal>
           ))}
         </div>

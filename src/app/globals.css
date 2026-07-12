@@ -133,6 +133,22 @@
   .eyebrow {
     @apply font-mono text-xs uppercase tracking-[0.18em] text-brass;
   }
+  .prose-custom {
+    @apply text-[1.05rem] leading-relaxed text-foreground/90;
+  }
+  .prose-custom h2 {
+    @apply mt-10 mb-3 font-heading text-2xl font-medium tracking-tight;
+  }
+  .prose-custom p {
+    @apply mb-5;
+  }
+  .prose-custom ul,
+  .prose-custom ol {
+    @apply mb-5 ml-5 list-disc space-y-1.5;
+  }
+  .prose-custom strong {
+    @apply font-semibold;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
