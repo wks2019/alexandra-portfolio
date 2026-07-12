@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ExternalLink, Mail } from "lucide-react";
+import { ExternalLink, Lock, Mail } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/site-config";
 
 export function Footer() {
@@ -55,9 +55,17 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border/60 py-6">
-        <p className="container-page text-xs text-muted-foreground">
-          © {new Date().getFullYear()} {SITE.name}. All rights reserved.
-        </p>
+        <div className="container-page flex items-center justify-between">
+          <p className="text-xs text-muted-foreground">
+            © {new Date().getFullYear()} {SITE.name}. All rights reserved.
+          </p>
+          <Link
+            href="/admin"
+            className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground"
+          >
+            <Lock className="size-3.5" /> Admin
+          </Link>
+        </div>
       </div>
     </footer>
   );
